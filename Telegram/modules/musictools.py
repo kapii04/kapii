@@ -266,7 +266,7 @@ async def vplay(event):
     ):
         return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Give Me Your Query Which You want to Stream**\n\n **Example**: `/vplay Nira Ishq Bass boosted`", buttons=btnn)
     if replied and not replied.video and not replied.document:
-        xnxx = await event.reply("**🔄 Processing Query... Please Wait!**")
+        xnxx = await event.reply("**🔄 Memproses Video... Harap Tunggu!**")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         RESOLUSI = 720
@@ -293,7 +293,7 @@ async def vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(
                     chat_id, songname, ytlink, url, "Video", RESOLUSI)
-                caption = f"**⌛ Added to Queue at** #{pos}\n\n**💡 Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}"
+                caption = f"**⌛ Di Tambahkan Ke Daftar Putar** #{pos}\n\n**💡 Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}"
                 await xnxx.delete()
                 await event.client.send_file(chat_id, thumb, caption=caption, buttons=btnn)
             else:
@@ -332,7 +332,7 @@ async def vplay(event):
             songname = "Telegram Video Player"
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Video", RESOLUSI)
-            caption = f"**⌛ Added to Queue at** #{pos}\n\n**💡 Title:** [{songname}]({link})\n👥 **Requested By:** {from_user}"
+            caption = f"**⌛ Di Tambahkan Ke Daftar Putar** #{pos}\n\n**💡 Title:** [{songname}]({link})\n👥 **Requested By:** {from_user}"
             await event.client.send_file(chat_id, ngantri, caption=caption, buttons=btnn)
             await xnxx.delete()
         else:
@@ -356,7 +356,7 @@ async def vplay(event):
                 clear_queue(chat_id)
                 await xnxx.edit(f"`{ep}`")
     else:
-        xnxx = await event.reply("**🔄 Processing Query... Please Wait!**")
+        xnxx = await event.reply("**🔄 Memproses Video... Harap Tunggu!**")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         RESOLUSI = 720
@@ -379,7 +379,7 @@ async def vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(
                     chat_id, songname, ytlink, url, "Video", RESOLUSI)
-                caption = f"**⌛ Added to Queue at** #{pos}\n\n💡 **Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}"
+                caption = f"**⌛ Di Tambahkan Ke Daftar Putar** #{pos}\n\n💡 **Title:** [{songname}]({url})\n**⏰ Duration:** `{duration}`\n👥 **Requested By:** {from_user}"
                 await xnxx.delete()
                 await event.client.send_file(chat_id, thumb, caption=caption, buttons=btnn)
             else:
