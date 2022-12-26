@@ -218,11 +218,11 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Support",
-                    url=f"https://t.me/Duniavirtualid",
+                    url=f"https://t.me/AnieSupports",
                 ),
                 InlineKeyboardButton(
                     text="Channel",
-                    url=f"https://t.me/kapiipay",
+                    url=f"https://t.me/AnieBots",
                 ),
                 InlineKeyboardButton(
                     text='Ping',
@@ -233,11 +233,11 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="GitLab",
-                    url=f"https://www.gitlab.com/kapii0202",
+                    url=f"https://www.gitlab.com/ITZ-ZAID",
                 ),
                 InlineKeyboardButton(
                     text="GitHub",
-                    url="https://www.github.com/kapii0202",
+                    url="https://www.github.com/ITZ-ZAID",
                 ),
             ],
         ])
@@ -314,7 +314,7 @@ def spb(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Report Error",
-                    url=f"https://t.me/Duniavirtualid",
+                    url=f"https://t.me/AnieSupports",
                 ),
                 InlineKeyboardButton(
                     text="Search again",
@@ -458,7 +458,7 @@ def media_query(query: str, update: Update, context: CallbackContext) -> None:
                 [
                     InlineKeyboardButton(
                         text="Report error",
-                        url="t.me/Duniavirtualid",
+                        url="t.me/AnieSupports",
                     ),
                     InlineKeyboardButton(
                         text="Search again",
