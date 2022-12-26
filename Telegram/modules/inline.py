@@ -43,17 +43,17 @@ def inlinequery(update: Update, _) -> None:
     results: List = []
     inline_help_dicts = [
         {
-            "title": "Account info on Anie",
-            "description": "Look up a Telegram account in Anie database",
+            "title": "Account info on vivi",
+            "description": "Look up a Telegram account in vivi database",
             "message_text": "Click the button below to look up a person in Anie database using their Telegram ID",
-            "thumb_urL": "https://telegra.ph/file/8fd1b2351135e778700a0.jpg",
+            "thumb_urL": "https://telegra.ph/file/03a25c7fdd40d37a64011.jpg",
             "keyboard": ".info ",
         },
         {
             "title": "About",
-            "description": "Know about Anie",
+            "description": "Know about vivi",
             "message_text": "Click the button below to get to know about Kigyo.",
-            "thumb_urL": "https://telegra.ph/file/8fd1b2351135e778700a0.jpg",
+            "thumb_urL": "https://telegra.ph/file/03a25c7fdd40d37a64011.jpg",
             "keyboard": ".about ",
         },
         {
@@ -208,7 +208,7 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
     sql.update_user(user.id, user.username)
     about_text = f"""
     Anie (@{context.bot.username})
-    Maintained by [Zaid](t.me/Timesisnotwaiting)
+    Maintained by [mocpi](t.me/mocpi)
     Built with ❤️ using python-telegram-bot v{str(__version__)}
     Running on Python {python_version()}
     """
@@ -218,11 +218,11 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Support",
-                    url=f"https://t.me/AnieSupports",
+                    url=f"https://t.me/ViviRobotSup",
                 ),
                 InlineKeyboardButton(
                     text="Channel",
-                    url=f"https://t.me/AnieBots",
+                    url=f"https://t.me/kapiipay",
                 ),
                 InlineKeyboardButton(
                     text='Ping',
@@ -233,11 +233,11 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="GitLab",
-                    url=f"https://www.gitlab.com/ITZ-ZAID",
+                    url=f"https://www.gitlab.com/xnxx",
                 ),
                 InlineKeyboardButton(
                     text="GitHub",
-                    url="https://www.github.com/ITZ-ZAID",
+                    url="https://www.github.com/xnxx",
                 ),
             ],
         ])
@@ -247,7 +247,7 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
         InlineQueryResultArticle
             (
             id=str(uuid4()),
-            title=f"About Anie (@{context.bot.username})",
+            title=f"About vivi (@{context.bot.username})",
             input_message_content=InputTextMessageContent(about_text, parse_mode=ParseMode.MARKDOWN,
                                                           disable_web_page_preview=True),
             reply_markup=kb
@@ -314,7 +314,7 @@ def spb(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Report Error",
-                    url=f"https://t.me/AnieSupports",
+                    url=f"https://t.me/ViviRobotSup",
                 ),
                 InlineKeyboardButton(
                     text="Search again",
