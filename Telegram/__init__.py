@@ -14,7 +14,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 from telethon.sessions import MemorySession
 from config import Config
-
+from pytgcalls import PyTgCalls
 StartTime = time.time()
 
 
@@ -35,7 +35,7 @@ log = logging.getLogger('[Telethon]')
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 log.info("[TELEGRAM] Bot is starting. | An Telethon Project. | Licensed under GPLv3.")
 log.info("[TELEGRAM] Not affiliated to Azur Lane or Yostar in any way whatsoever.")
-log.info("[TELEGRAM] Project maintained by: github.com/kapii0202 (t.me/Duniavirtualid)")
+log.info("[TELEGRAM] Project maintained by: github.com/ITZ-ZAID (t.me/Timesisnotwaiting)")
 
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 7:
@@ -147,6 +147,7 @@ API_HASH = '4e984ea35f854762dcde906dce426c2d'
 API_ID = '6435225'
 STRING_SESSION = ZInit.STRING_SESSION
 WORKERS = 8
+ASSISTANT_ID = ZInit.ASSISTANT_ID
 
 from Telegram.modules.sql import SESSION
 
@@ -157,17 +158,19 @@ if STRING_SESSION:
 else: 
    ubot2 = None
 
+client = ubot2
+call_py = PyTgCalls(ubot2)
 try:
     ubot2.start()
+    call_py.start()
 except BaseException:
     print("WARNING ⚠️ ! Have you added a STRING_SESSION in deploying?? Some modules are affect")
-    pass
+    sys.exit(1)
 
 dispatcher = updater.dispatcher
 
 
 
-# Load at end to ensure all prev variables have been set
 from Telegram.modules.helper_funcs.handlers import CustomCommandHandler
 
 if CUSTOM_CMD and len(CUSTOM_CMD) >= 1:

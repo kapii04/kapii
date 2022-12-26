@@ -29,6 +29,10 @@ from Telegram import (
     telethn,
     AnieINIT
 )
+from config import Config
+CHANNEL = Config.CHANNEL
+SUPPORT = Config.SUPPORT
+
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from Telegram.modules import ALL_MODULES
@@ -137,8 +141,9 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             first_name = update.effective_user.first_name
             update.effective_message.edit_text(
                 text=gs(chat.id, "pm_start_text").format(
-                    escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
+                    escape_markdown(first_name),
+                    escape_markdown(OWNER_USERNAME),
                     OWNER_ID,
                 ),
                 parse_mode=ParseMode.MARKDOWN,
@@ -146,7 +151,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                     [ 
                         [
                             InlineKeyboardButton(
-                                text=gs(chat.id, "add_bot_to_group_btn"),
+                                text=gs(chat.id, "add_bot_to_group_btn").format(context.bot.first_name),
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username
                                 ),
@@ -165,7 +170,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                         [
                             InlineKeyboardButton(
                                 text=gs(chat.id, "support_chat_link_btn"),
-                                url='https://t.me/kapiipay',
+                                url=f'https://t.me/{SUPPORT}',
                             ),
                             InlineKeyboardButton(
                                 text="Help",
@@ -173,7 +178,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "updates_channel_link_btn"),
-                                url="https://t.me/Duniavirtualid",
+                                url=f"https://t.me/{CHANNEL}",
                             ),
                         ],
                     ]
@@ -232,8 +237,9 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 text=gs(chat.id, "pm_start_text").format(
-                    escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
+                    escape_markdown(first_name),
+                    escape_markdown(OWNER_USERNAME),
                     OWNER_ID,
                 ),
                 parse_mode=ParseMode.MARKDOWN,
@@ -241,7 +247,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                     [
                         [
                             InlineKeyboardButton(
-                                text=gs(chat.id, "add_bot_to_group_btn"),
+                                text=gs(chat.id, "add_bot_to_group_btn").format(context.bot.first_name),
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username
                                 ),
@@ -254,13 +260,13 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "source_btn"),
-                                url="https://github.com",
+                                url="https://github.com/ITZ-ZAID/Telegram",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
                                 text=gs(chat.id, "support_chat_link_btn"),
-                                url='https://t.me/kapiipay',
+                                url=f'https://t.me/{SUPPORT}',
                             ),
                             InlineKeyboardButton(
                                 text="Help",
@@ -268,7 +274,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "updates_channel_link_btn"),
-                                url="https://t.me/Duniavirtualid",
+                                url=f"https://t.me/{CHANNEL}",
                             ),
                         ],
                     ]
@@ -662,7 +668,7 @@ def donate(update: Update, _: CallbackContext):
         context: CallbackContext -
     """
 
-    update.effective_message.reply_text("Traktter me 👉 https://trakteer.id/mocpi \n for more Contact in @mocpi!  >_<")
+    update.effective_message.reply_text("can Donate Via \n Razorpay 👉 https://pages.razorpay.com/GODFATHERDONATIONS \n PayPal 👉 https://www.paypal.com/paypalme/mrakki58 for more Contact in @Godfatherakki!  >_<")
 
 
 @zaidmsg(Filters.status_update.migrate)
@@ -705,12 +711,11 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        log.info(f"Bot started, Using long polling. | BOT: [@{dispatcher.bot.username}]")
+        log.info(f"Using long polling. | BOT: [@{dispatcher.bot.username}]")
         AnieINIT.bot_id = dispatcher.bot.id
         AnieINIT.bot_username = dispatcher.bot.username
         AnieINIT.bot_name = dispatcher.bot.first_name
-        updater.start_polling(timeout=15, read_latency=4, allowed_updates=Update.ALL_TYPES,
-                              drop_pending_updates=ZInit.DROP_UPDATES)
+        updater.start_polling(timeout=15, read_latency=4, allowed_updates=Update.ALL_TYPES, drop_pending_updates=ZInit.DROP_UPDATES)
     if len(argv) not in (1, 3, 4):
         telethn.disconnect()
     else:
@@ -721,4 +726,4 @@ def main():
 if __name__ == "__main__":
     log.info("[TELEGRAM] Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
-    threading.Thread(target=main).start()
+    main()
