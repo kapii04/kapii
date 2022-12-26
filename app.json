@@ -1,8 +1,8 @@
 {
     "name": "Telegram",
     "description": "an awesome music+ management source code.",
-    "keywords": ["Kapii", "telegram", "Zaid-Vc-Player", "music", "voice chat", "telegram", "Yukki", "Yukki Music", "Private Music", "telethon"],
-    "repository": "https://github.com/kapii04/kapii",
+    "keywords": ["Zaid", "telegram", "Zaid-Vc-Player", "music", "voice chat", "telegram", "Yukki", "Yukki Music", "Private Music", "telethon"],
+    "repository": "https://github.com/ITZ-ZAID/Telegram",
   "stack": "container",
     "env": {
         "STRING_SESSION": {
@@ -11,7 +11,7 @@
         },
         "REPO_URL": {
             "description": "URL of the REPO, If You Have edited Repo.. Else Leave ! Don't Change",
-            "value": "https://github.com/kapii04/kapii"
+            "value": "https://github.com/ITZ-ZAID/Telegram"
         },
         "OWNER_USERNAME": {
             "description": "your profile username without@!",
@@ -25,12 +25,12 @@
         "SUPPORT": {
             "description": "Fill there your group username else leave",
             "required": false,
-            "value": "Duniavirtualid"
+            "value": "TheSupportChat"
         },
         "CHANNEL": {
             "description": "Fill there your Channel username else leave",
             "required": false,
-            "value": "kapiipay"
+            "value": "TheUpdatesChannel"
         },
         "DATABASE_URL": {
             "description": "Fill database from elephantsql.com",
@@ -38,23 +38,23 @@
             "value": ""
         },
         "OWNER_ID": {
-            "description": "Your Id, Go To @KapiiXMusic_bot Pm and Type /id..",
+            "description": "Your Id, Go To @Zaid2_Robot Pm and Type /id..",
             "value": ""
         },
         "DEV_USERS": {
-            "description": "Dev Access Of Your Bot (Id) Go to @KapiiXMusic_bot And Type /id..",
+            "description": "Dev Access Of Your Bot (Id) Go to @Zaid2_Robot And Type /id..",
             "value": ""
         },
         "SUDO_USERS": {
-            "description": "Access Of Your Bot (Id) Go to @KapiiXMusic_bot And Type /id..",
+            "description": "Access Of Your Bot (Id) Go to @Zaid2_Robot And Type /id..",
             "value": ""
         },
         "GBAN_LOGS": {
-            "description": "Forward Your Channel Message to @KapiiXMusic_bot To Get Your Channel ID..",
+            "description": "Forward Your Channel Message to @Zaid2_Robot To Get Your Channel ID..",
             "value": "-100"
         },
         "MESSAGE_DUMP": {
-            "description": "Forward Your Channel Message to @KapiiXMusic_bot To Get Your Channel ID..",
+            "description": "Forward Your Channel Message to @Zaid2_Robot To Get Your Channel ID..",
             "value": "-100"
         },
         "TOKEN": {
