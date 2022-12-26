@@ -9,9 +9,9 @@ set_chat_lang: "Great, {} it is from now on!"
 
 
 pm_start_text: |
-   ────「 Kapii X Muisc] 」────
+   ────「 {} ] 」────
    ʜᴇʏ! {}
-   sᴀʏᴀ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ x ᴍᴜsɪᴄ ʏᴀɴɢ ʙɪsᴀ ᴀɴᴅᴀ ᴘᴀᴋᴀɪ
+   ɪ ᴀᴍ ᴀɴ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇᴅ ᴀᴅᴠᴀɴᴄᴇ ɢʀᴏᴜp ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ ᴀ ʟᴏᴛ ᴏғ sᴘᴇᴄɪᴀʟɪᴛʏ.
    ➖➖➖➖➖➖➖➖➖➖➖➖➖
    I have lots of handy features such as:
    ‣ Warning system
@@ -20,11 +20,11 @@ pm_start_text: |
    ‣ Note keeping system
    ‣ Filters keeping system
    ‣ Approvals and much more.
-   ‣ Managed By @mocpi.
+   ‣ Managed By @{}.
    ➖➖➖➖➖➖➖➖➖➖➖➖➖
    ➛ᴛʀʏ ᴛʜᴇ /help ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴀʙɪʟɪᴛɪᴇs ××
    
-grp_start_text: "Hi, Kapiixmusicbot Is Here."
+grp_start_text: "Hi, I'm Alive."
 
 pm_help_text: |
     • /start: Starts me, can be used to check I'm alive or not.
@@ -32,22 +32,22 @@ pm_help_text: |
     • /donate: Get Details about Donating which help to improve bots speeds and more.
     Click on the buttons below to get documentation about specific modules!
 
-add_bot_to_group_btn: "Tambahkan Ke Grup"
+add_bot_to_group_btn: "Add {} to your chat"
 support_chat_link_btn: "Support"
 updates_channel_link_btn: "Updates"
 source_btn: "Source code"
 owner_btn: "Owner"
 
 admin_help: |
-   • `/admins`*:* daftar admin di chat
+   • `/admins`*:* list of admins in the chat
 
    *Admins only:*
-   • `/pin`*:* sematkan pesan mohon reply chat - tambahkan `'loud'` atau `'notify'` untuk memberikan notifikasi kepada pengguna.
-   • `/unpin`*:* melepas sematan pesan yang saat ini disematkan
+   • `/pin`*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users.
+   • `/unpin`*:* unpins the currently pinned message
    • `/invitelink`*:* gets invitelink
-   • `/promote`*:* mempromosikan pengguna (reply)
-   • `/demote`*:* demote pengguna yang (reply)
-   • `/title <title here>`*:* menetapkan judul khusus untuk admin yang dipromosikan bot
+   • `/promote`*:* promotes the user replied to
+   • `/demote`*:* demotes the user replied to
+   • `/title <title here>`*:* sets a custom title for an admin that the bot promoted
 
 afk_help: |
    - /afk <reason>: mark yourself as AFK(away from keyboard).
