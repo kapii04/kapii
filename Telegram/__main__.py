@@ -100,7 +100,7 @@ def send_help(chat_id, text, keyboard=None):
 
     if not keyboard:
         kb = paginate_modules(0, HELPABLE, "help")
-        # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/TheSupportChat'),
+        # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/ViviRobotSup'),
         #           InlineKeyboardButton(text='Back', callback_data='start_back'),
         #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
         keyboard = InlineKeyboardMarkup(kb)
@@ -164,7 +164,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "source_btn"),
-                                url="https://github.com/ITZ-ZAID/Telegram",
+                                url="https://pornhub.com",
                             ),
                         ],
                         [
@@ -260,7 +260,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "source_btn"),
-                                url="https://github.com/ITZ-ZAID/Telegram",
+                                url="https://pornhub.com",
                             ),
                         ],
                         [
