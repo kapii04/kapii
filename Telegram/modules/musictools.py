@@ -201,7 +201,7 @@ async def play(event):
             songname = "Voice Note"
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            caption = f"⌛ **Added to Queue at** #{pos}\n\n**💡 Title:** [{songname}]({link})\n👥 **Requested By:** {from_user}"
+            caption = f"⌛ **Di Tambahkan Ke Daftar Putar** #{pos}\n\n**💡 Title:** [{songname}]({link})\n👥 **Requested By:** {from_user}"
             await event.client.send_file(chat_id, ngantri, caption=caption, buttons=btnn)
             await botman.delete()
         else:
@@ -264,7 +264,7 @@ async def vplay(event):
         or not replied
         and not title
     ):
-        return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Give Me Your Query Which You want to Stream**\n\n **Example**: `/vplay Nira Ishq Bass boosted`", buttons=btnn)
+        return await event.client.send_file(chat_id, Config.CMD_IMG, caption="**Beri Kan Judul Anda Yang Ingin Anda Streaming**\n\n **Example**: `/vplay upin ipin`", buttons=btnn)
     if replied and not replied.video and not replied.document:
         xnxx = await event.reply("**🔄 Memproses Video... Harap Tunggu!**")
         query = event.text.split(maxsplit=1)[1]
